@@ -1,0 +1,2 @@
+module LabelShizitsHelper
+end

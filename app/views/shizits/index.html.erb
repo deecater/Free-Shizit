@@ -1,0 +1,43 @@
+<h1>Listing shizits</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Street line1</th>
+    <th>Street line2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th>Description</th>
+    <th>Promotion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shizits.each do |shizit| %>
+  <tr>
+    <td><%= shizit.id %></td>
+    <td><%= shizit.name %></td>
+    <td><%= shizit.start_date %></td>
+    <td><%= shizit.end_date %></td>
+    <td><%= shizit.street_line1 %></td>
+    <td><%= shizit.street_line2 %></td>
+    <td><%= shizit.city %></td>
+    <td><%= shizit.state %></td>
+    <td><%= shizit.zipcode %></td>
+    <td><%= shizit.description %></td>
+    <td><%= shizit.promotion %></td>
+    <td><%= link_to 'Show', shizit %></td>
+    <td><%= link_to 'Edit', edit_shizit_path(shizit) %></td>
+    <td><%= link_to 'Destroy', shizit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shizit', new_shizit_path %>

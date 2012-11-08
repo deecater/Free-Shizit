@@ -1,0 +1,61 @@
+<%= form_for(@shizit) do |f| %>
+  <% if @shizit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shizit.errors.count, "error") %> prohibited this shizit from being saved:</h2>
+
+      <ul>
+      <% @shizit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :street_line1 %><br />
+    <%= f.text_field :street_line1 %>
+  </div>
+  <div class="field">
+    <%= f.label :street_line2 %><br />
+    <%= f.text_field :street_line2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :promotion %><br />
+    <%= f.text_field :promotion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

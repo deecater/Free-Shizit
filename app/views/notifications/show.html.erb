@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @notification.id %>
+</p>
+
+<p>
+  <b>Option:</b>
+  <%= @notification.option %>
+</p>
+
+
+<%= link_to 'Edit', edit_notification_path(@notification) %> |
+<%= link_to 'Back', notifications_path %>

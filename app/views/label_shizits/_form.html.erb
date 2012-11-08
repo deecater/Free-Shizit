@@ -1,0 +1,17 @@
+<%= form_for(@label_shizit) do |f| %>
+  <% if @label_shizit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@label_shizit.errors.count, "error") %> prohibited this label_shizit from being saved:</h2>
+
+      <ul>
+      <% @label_shizit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

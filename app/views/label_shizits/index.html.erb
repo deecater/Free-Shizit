@@ -1,0 +1,21 @@
+<h1>Listing label_shizits</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @label_shizits.each do |label_shizit| %>
+  <tr>
+    <td><%= link_to 'Show', label_shizit %></td>
+    <td><%= link_to 'Edit', edit_label_shizit_path(label_shizit) %></td>
+    <td><%= link_to 'Destroy', label_shizit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Label shizit', new_label_shizit_path %>
